@@ -1,0 +1,73 @@
+.sign-in-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-container {
+  width: 1140px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sign-in {
+  background-color: #fafafb;
+  width: 305px;
+  height: 430px;
+  border-radius: 30px;
+  padding: 40px;
+
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    font-size: 15px;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    resize: none;
+  }
+}
+
+.logo-sign-in {
+  img {
+    width: 130px;
+    margin-bottom: 20px;
+  }
+}
+
+.sign-in-input {
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  margin-bottom: 5px;
+  color: #cecece;
+  font-size: 15px;
+}
+
+.button-regular {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #0037f5;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 30px;
+  font-size: 15px;
+}
