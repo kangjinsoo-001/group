@@ -67,7 +67,6 @@
 .sign-in {
   background-color: #fafafb;
   width: 305px;
-  height: 430px;
   border-radius: 30px;
   padding: 40px; }
   .sign-in input {
@@ -133,11 +132,26 @@
     display: flex;
     justify-content: space-between;
     width: 230px; }
+    .another-sign-up .another-logo-container .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
     .another-sign-up .another-logo-container .google-logo {
       width: 50px;
       height: 50px;
       background-color: #ededed;
-      border-radius: 50%; }
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .another-sign-up .another-logo-container .google-logo img {
+        width: 23px; }
+
+.another-text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #313136; }
 
 * {
   margin: 0;
