@@ -38,19 +38,19 @@
           <div class="another-sign-up">
             <div class="another-logo-container">
               <div class="container">
-                <div class="google-logo">
+                <div class="another-logo google">
                   <img src={googleLogoImage} alt="google">
                 </div>
                 <div class="another-text">Google</div>
               </div>
               <div class="container">
-                <div class="google-logo">
+                <div class="another-logo naver">
                     <img src={naverLogoImage} alt="naver">
                 </div>
                 <div class="another-text">Naver</div>
               </div>
               <div class="container">
-                <div class="google-logo">
+                <div class="another-logo kakao">
                     <img src={kakaoLogoImage} alt="kako">
                 </div>
                 <div class="another-text">Kakao</div>
