@@ -45,6 +45,8 @@ export default {
     svelte(require("./svelte.config")),
     scss({
       output: "public/build/assets.css",
+      outputStyle: "compressed",
+      watch: ["src"],
     }),
     // we'll extract any component CSS out into
     // a separate file - better for performance
