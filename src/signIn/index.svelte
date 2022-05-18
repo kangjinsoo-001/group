@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
+<script lang="ts">
+    const logoImage: string = "image/group-logo.png"
+    const googleLogoImage: string = "image/google_logo.png"
+    const naverLogoImage: string = "image/naver_logo.png"
+    const kakaoLogoImage: string = "image/kakao_logo.png"
+
+</script>
     <div class="sign-in-container">
       <div class="sub-container">
         <div class="logo-sign-in">
             <a href="./index.html" title="로그인">
-              <img src="./image/group-logo.png"></img>
+              <img src={logoImage} alt="logo"/>
             </a>
         </div>
 
@@ -20,12 +17,12 @@
 
           <div class="sign-in-input">
             <div class="sub-title">아이디</div>
-            <div><input type="email" placeholder="이메일을 입력해주세요."></input></div>
+            <div><input type="email" placeholder="이메일을 입력해주세요." /></div>
           </div>
 
           <div class="sign-in-input">
             <div><div class="sub-title">비밀번호</div></div>
-            <div><input type="email" placeholder="이메일을 입력해주세요."></input></div>
+            <div><input type="email" placeholder="이메일을 입력해주세요." /></div>
           </div>
 
           <div class="button-regular">
@@ -42,19 +39,19 @@
             <div class="another-logo-container">
               <div class="container">
                 <div class="google-logo">
-                  <img src="./image/google_logo.png"></img>
+                  <img src={googleLogoImage} alt="google">
                 </div>
                 <div class="another-text">Google</div>
               </div>
               <div class="container">
                 <div class="google-logo">
-                  <img src="./image/naver_logo.png"></img>
+                    <img src={naverLogoImage} alt="naver">
                 </div>
                 <div class="another-text">Naver</div>
               </div>
               <div class="container">
                 <div class="google-logo">
-                  <img src="./image/kakao_logo.png"></img>
+                    <img src={kakaoLogoImage} alt="kako">
                 </div>
                 <div class="another-text">Kakao</div>
               </div>
@@ -63,5 +60,5 @@
 
         </div>
       </div>
-  </body>
-</html>
+      </div>
+
