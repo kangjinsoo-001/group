@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { Link } from "svelte-navigator";
+
   const logoImage: string = "image/group-logo.png";
   const googleLogoImage: string = "image/google_logo.png";
   const naverLogoImage: string = "image/naver_logo.png";
@@ -8,9 +10,9 @@
 <div class="sign-in-container">
   <div class="sub-container">
     <div class="logo-sign-in">
-      <a href="./index.html" title="로그인">
+      <Link to="/">
         <img src={logoImage} alt="logo" />
-      </a>
+      </Link>
     </div>
 
     <div class="sign-in">

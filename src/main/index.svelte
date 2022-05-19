@@ -1,15 +1,21 @@
 <script lang="ts">
+  import { Link } from "svelte-navigator";
+
   const logoImage: string = "image/group-logo.png";
 </script>
 
 <div class="header" id="header">
   <div class="header-container">
     <div class="main-logo">
-      <div><img src={logoImage} alt="logo" /></div>
+      <div>
+        <Link to="/"><img src={logoImage} alt="logo" /></Link>
+      </div>
     </div>
     <div class="category">
       <div>마이페이지</div>
-      <div><a href="./sign-in.html" title="로그인">로그인</a></div>
+      <div>
+        <Link to="sign_in">로그인</Link>
+      </div>
       <div>나이트모드</div>
     </div>
   </div>
