@@ -26,7 +26,7 @@
       <div class="sign-in-input">
         <div><div class="sub-title">비밀번호</div></div>
         <div>
-          <input type="email" placeholder="이메일을 입력해주세요." />
+          <input type="email" placeholder="비밀번호를 입력해주세요." />
         </div>
       </div>
 
@@ -62,6 +62,13 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="find-content">
+      <div>비밀번호 찾기</div>
+      <div>|</div>
+      <div>아이디 찾기</div>
+      <div>|</div>
+      <div>회원가입</div>
     </div>
   </div>
 </div>

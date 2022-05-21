@@ -146,3 +146,18 @@
   margin-top: 5px;
   color: #818183;
 }
+
+.find-content {
+  display: flex;
+  margin-top: 30px;
+
+  div {
+    color: #cecece;
+    margin-right: 20px;
+    font-size: 14px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
