@@ -81,5 +81,6 @@ export default {
   ],
   watch: {
     clearScreen: false,
+    chokidar: false,
   },
 };
