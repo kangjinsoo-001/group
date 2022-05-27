@@ -68,7 +68,9 @@
       <div>|</div>
       <div>아이디 찾기</div>
       <div>|</div>
-      <div>회원가입</div>
+      <Link to="/sign_up">
+        <div>회원가입</div>
+      </Link>
     </div>
   </div>
 </div>
