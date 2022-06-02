@@ -13,6 +13,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  &.sign-up {
+    margin-bottom: 150px;
+  }
 }
 
 .sign-in {
