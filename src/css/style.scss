@@ -3,6 +3,7 @@
 @import "./keyframe.scss";
 @import "./signUp.scss";
 @import "./signIn.scss";
+@import "./commonUse.scss";
 
 * {
   margin: 0;
@@ -14,6 +15,10 @@
 
 body {
   padding: 0;
+}
+
+input {
+  width: 100%;
 }
 
 .header {

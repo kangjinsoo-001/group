@@ -5,15 +5,21 @@
   border-radius: 23px;
 }
 
-.sign-up-info {
-  font-size: 27px;
-  font-weight: bold;
+.sign-up-info-container {
+  .info {
+    font-size: 27px;
+    font-weight: bold;
+
+    &.sec {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .sign-up-sec-info {
   font-size: 15px;
   color: #cecece;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .logo-sign-up {
@@ -21,4 +27,9 @@
     width: 110px;
     margin-bottom: 20px;
   }
+}
+
+.sign-up-email-input {
+  display: flex;
+  margin-top: 10px;
 }
