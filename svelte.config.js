@@ -1,12 +1,30 @@
-// svelte.config.js
-const sveltePreprocess = require("svelte-preprocess");
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const production = !process.env.ROLLUP_WATCH;
+const filePath = dirname(fileURLToPath(import.meta.url));
+const sassPath = `${filePath}/src/scss/`;
 
-module.exports = {
-  preprocess: sveltePreprocess({ sourceMap: !production }),
-  compilerOptions: {
-    // enable run-time checks when not in production
-    dev: !production,
-  },
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: preprocess({
+		scss: {
+			includePaths: ['src/scss'],
+			prependData: `@import '${sassPath}/style';`
+		}
+	}),
+
+	kit: {
+		adapter: adapter(),
+
+		// Override http methods in the Todo forms
+		methodOverride: {
+			allowed: ['PATCH', 'DELETE']
+		}
+	}
 };
+
+export default config;
