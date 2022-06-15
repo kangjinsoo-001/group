@@ -2,8 +2,8 @@
 	"name": "my-app",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev --port 8000",
-		"build": "svelte-kit build",
+		"dev": "env-cmd -f .env.development svelte-kit dev --port 8000",
+		"build": "env-cmd -f .env.production svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"prepare": "svelte-kit sync",
@@ -36,6 +36,7 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"@lukeed/uuid": "^2.0.0",
-		"cookie": "^0.4.1"
+		"cookie": "^0.4.1",
+		"env-cmd": "^10.1.0"
 	}
 }

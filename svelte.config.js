@@ -1,7 +1,7 @@
-import adapter from '@sveltejs/adapter-auto';
-import preprocess from 'svelte-preprocess';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import adapter from "@sveltejs/adapter-auto";
+import preprocess from "svelte-preprocess";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const filePath = dirname(fileURLToPath(import.meta.url));
 const sassPath = `${filePath}/src/scss/`;
@@ -12,7 +12,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: preprocess({
 		scss: {
-			includePaths: ['src/scss'],
+			includePaths: ["src/scss"],
 			prependData: `@import '${sassPath}/style';`
 		}
 	}),
@@ -22,7 +22,12 @@ const config = {
 
 		// Override http methods in the Todo forms
 		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
+			allowed: ["PATCH", "DELETE"]
+		},
+		vite: {
+			define: {
+				"process.env": process.env
+			}
 		}
 	}
 };
