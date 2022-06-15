@@ -16,6 +16,8 @@
 
 <script lang="ts">
 	import logoImage from "$lib/image/group-logo.png";
+	import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
+	import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
 </script>
 
 <svelte:head>
@@ -50,8 +52,8 @@
 					</div>
 				</div>
 				<div class="dieter-rams-img">
-					<img src="./image/dieter_rams_first.png" alt="" />
-					<img src="./image/dieter_rams_sec.png" alt="" />
+					<img src={dieterRamsFirst} alt="" />
+					<img src={dieterRamsSec} alt="" />
 					<div>
 						<div class="important">난 중요해 🔥</div>
 					</div>
