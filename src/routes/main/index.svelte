@@ -18,6 +18,7 @@
 	import logoImage from "$lib/image/group-logo.png";
 	import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
 	import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
+	import { t } from "$lib/translations";
 </script>
 
 <svelte:head>
@@ -33,11 +34,11 @@
 			</div>
 		</div>
 		<div class="category">
-			<div>마이페이지</div>
+			<div>{$t("main.myPage")}</div>
 			<div>
-				<a href="sign_in">로그인</a>
+				<a href="sign_in">{$t("main.logIn")}</a>
 			</div>
-			<div>나이트모드</div>
+			<div>{$t("main.nightMode")}</div>
 		</div>
 	</div>
 </div>
