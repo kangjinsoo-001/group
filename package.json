@@ -2,6 +2,7 @@
 	"name": "my-app",
 	"version": "0.0.1",
 	"scripts": {
+		"postinstall": "patch-package",
 		"dev": "env-cmd -f .env.development svelte-kit dev --port 8000",
 		"build": "env-cmd -f .env.production svelte-kit build",
 		"package": "svelte-kit package",
@@ -23,6 +24,7 @@
 		"eslint": "^8.12.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"postinstall-postinstall": "^2.1.0",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
 		"sass": "^1.52.2",
@@ -38,6 +40,8 @@
 		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.1",
 		"env-cmd": "^10.1.0",
-		"sveltekit-i18n": "^2.2.2"
+		"patch-package": "^6.4.7",
+		"sveltekit-i18n": "^2.2.2",
+		"sveltestrap": "^5.9.0"
 	}
 }
