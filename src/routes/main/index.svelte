@@ -15,10 +15,18 @@
 </script>
 
 <script lang="ts">
-	import logoImage from "$lib/image/group-logo.png";
 	import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
 	import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
-	import { t } from "$lib/translations";
+
+	type Todo = {
+		uid: string;
+		created_at: Date;
+		text: string;
+		done: boolean;
+		pending_delete: boolean;
+	};
+
+	export let todos: Todo[];
 </script>
 
 <svelte:head>
@@ -26,22 +34,6 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="header" id="header">
-	<div class="header-container">
-		<div class="main-logo">
-			<div>
-				<a href="/"><img src={logoImage} alt="logo" /></a>
-			</div>
-		</div>
-		<div class="category">
-			<div>{$t("main.myPage")}</div>
-			<div>
-				<a href="sign_in">{$t("main.logIn")}</a>
-			</div>
-			<div>{$t("main.nightMode")}</div>
-		</div>
-	</div>
-</div>
 <div class="main-container">
 	<div class="container">
 		<div class="word">
@@ -67,3 +59,7 @@
 	</div>
 	<div class="for-height" />
 </div>
+
+<style>
+	@import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+</style>
