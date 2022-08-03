@@ -44,21 +44,6 @@
 			</NavItem>
 		</Nav>
 	</Navbar>
-	<div class="header" id="header">
-		<div class="header-container">
-			<div class="main-logo">
-				<div>
-					<a href="/"><img src={logoImage} alt="logo" /></a>
-				</div>
-			</div>
-			<div class="category">
-				<div>{$t("layout.writing")}</div>
-				<div>
-					<a href="sign_in">{$t("layout.logIn")}</a>
-				</div>
-			</div>
-		</div>
-	</div>
 </header>
 
 <style>
