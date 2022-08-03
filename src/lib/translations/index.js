@@ -37,6 +37,16 @@ const config = {
 			key: "sign_up",
 			routes: ["/sign_up"],
 			loader: async () => (await import("./ko/sign_up.json")).default
+		},
+		{
+			locale: "ko",
+			key: "layout",
+			loader: async () => (await import("./ko/layout.json")).default
+		},
+		{
+			locale: "en",
+			key: "layout",
+			loader: async () => (await import("./ko/layout.json")).default
 		}
 	]
 };
