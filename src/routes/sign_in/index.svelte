@@ -27,7 +27,7 @@
 </svelte:head>
 
 <div class="sign-in-container">
-	<div class="sub-container">
+	<section class="sub-container">
 		<div class="logo-sign-in">
 			<a href="/">
 				<img src={logoImage} alt="logo" />
@@ -36,30 +36,30 @@
 
 		<div class="sign-in">
 			<div class="sign-in-input">
-				<div class="sub-title">아이디</div>
+				<h2 class="sub-title">아이디</h2>
 				<div>
 					<input type="email" placeholder="이메일을 입력해주세요." />
 				</div>
 			</div>
 
 			<div class="sign-in-input">
-				<div><div class="sub-title">비밀번호</div></div>
+				<h2 class="sub-title">비밀번호</h2>
 				<div>
 					<input type="email" placeholder="비밀번호를 입력해주세요." />
 				</div>
 			</div>
 
-			<div class="button-regular">
+			<button class="button-regular">
 				<div>로그인</div>
-			</div>
+			</button>
 
-			<div class="another-sign-up-info">
+			<aside class="another-sign-up-info">
 				<div class="line" />
 				<div class="info">다른 계정으로 로그인</div>
 				<div class="line" />
-			</div>
+			</aside>
 
-			<div class="another-sign-up">
+			<aside class="another-sign-up">
 				<div class="another-logo-container">
 					<div class="container">
 						<div class="another-logo google">
@@ -80,9 +80,10 @@
 						<div class="another-text">Kakao</div>
 					</div>
 				</div>
-			</div>
+			</aside>
 		</div>
-		<div class="find-content">
+
+		<footer class="find-content">
 			<div>비밀번호 찾기</div>
 			<div>|</div>
 			<div>아이디 찾기</div>
@@ -90,6 +91,6 @@
 			<a href="/sign_up">
 				<div>회원가입</div>
 			</a>
-		</div>
-	</div>
+		</footer>
+	</section>
 </div>

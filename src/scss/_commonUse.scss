@@ -1,45 +1,49 @@
+button {
+	border: none;
+}
+
 .flex {
-  display: flex;
+	display: flex;
 }
 
 .flc {
-  display: flex;
-  align-items: center;
-  &.jcc {
-    justify-content: center;
-  }
-  &.jsb {
-    justify-content: space-between;
-  }
+	display: flex;
+	align-items: center;
+	&.jcc {
+		justify-content: center;
+	}
+	&.jsb {
+		justify-content: space-between;
+	}
 }
 
 .mr3 {
-  margin-right: 3px;
+	margin-right: 3px;
 }
 
 .mr10 {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 .mb10 {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .mb20 {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .basic-btn {
-  background-color: #0037f5;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
+	background-color: #0037f5;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+	font-weight: 500;
+	cursor: pointer;
 }
 
 .go-back-btn {
-  color: #cecece;
-  font-size: 15px;
-  cursor: pointer;
+	color: #cecece;
+	font-size: 15px;
+	cursor: pointer;
 }
