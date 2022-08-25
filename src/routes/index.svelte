@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	import Ranking from "$lib/components/Ranking.svelte";
+	import PostCard from "$lib/components/PostCard.svelte";
 	import { Col, Container, Row } from "sveltestrap";
 </script>
 
@@ -13,5 +14,10 @@
 </svelte:head>
 
 <Container>
-	<Row><Col xs="7">1</Col><Col xs="5"><Ranking /></Col></Row>
+	<Row>
+		<Col xs="7"><PostCard /></Col>
+		<Col xs="5">
+			<Ranking />
+		</Col>
+	</Row>
 </Container>
