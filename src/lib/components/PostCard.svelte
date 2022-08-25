@@ -49,9 +49,9 @@
 
 {#each dummy as { groupName, image, author, PostTitle, description }, i}
 	<Card class="mb-3">
-		<CardTitle class="card-title">
-			<Row class="d-flex">
-				<Col xs="6" md="8">
+		<CardTitle class="card-title border-bottom mt-3 p-2">
+			<Row class="d-flex justify-content-center">
+				<Col class="w-100">
 					<Row>
 						{groupName}
 					</Row>
@@ -59,11 +59,12 @@
 						{author}
 					</Row>
 				</Col>
-				<Col xs="4" md="2">
-					<Button>가입하기</Button>
-					<Icon class="three-dots" name="three-dots" />
+				<Col class="flex-shrink-1">
+					<Row class="d-flex">
+						<Col xs="10"><Button>가입하기</Button></Col>
+						<Col xs="2"><Icon name="three-dots" /></Col>
+					</Row>
 				</Col>
-				<Col xs="2" md="2" />
 			</Row>
 		</CardTitle>
 		{#if image}
@@ -78,8 +79,3 @@
 		<CardFooter>Footer</CardFooter>
 	</Card>
 {/each}
-
-<style>
-	.card-title {
-	}
-</style>
