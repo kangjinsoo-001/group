@@ -12,8 +12,12 @@
 		DropdownMenu,
 		DropdownItem,
 		FormGroup,
-		Input
+		Input,
+		Button
 	} from "sveltestrap";
+	function toggle() {
+		window.document.body.classList.toggle("dark-mode");
+	}
 </script>
 
 <header>
@@ -43,6 +47,7 @@
 				<NavLink href="sign_in">{$t("layout.logIn")}</NavLink>
 			</NavItem>
 		</Nav>
+		<Button on:click={toggle}>다크모드</Button>
 	</Navbar>
 </header>
 
@@ -51,5 +56,15 @@
 		cursor: pointer;
 		width: 120px;
 		margin-top: 10px;
+	}
+
+	:global(body) {
+		background-color: #f2eee2;
+		color: #0084f6;
+		transition: background-color 0.3s;
+	}
+	:global(body.dark-mode) {
+		background-color: #1d3040;
+		color: #bfc2c7;
 	}
 </style>
