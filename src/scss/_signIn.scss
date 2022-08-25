@@ -149,24 +149,24 @@
 }
 
 .another-text {
-	font-size: 13px;
+	font-size: 0.8rem;
 	font-weight: 300;
-	margin-top: 5px;
-	color: #818183;
+	margin-top: 0.2rem;
+	color: #afafaf;
 }
 
 .find-content {
 	display: flex;
-	margin-top: 30px;
+	margin-top: 2rem;
 
 	div {
 		color: #cecece;
-		margin-right: 20px;
-		font-size: 14px;
+		margin-right: 1rem;
+		font-size: 0.9rem;
 		cursor: pointer;
 
 		&:last-child {
-			margin-right: 0px;
+			margin-right: 0rem;
 		}
 	}
 }
