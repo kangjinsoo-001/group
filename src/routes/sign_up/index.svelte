@@ -1,5 +1,7 @@
 <script lang="ts">
 	import logoImage from "$lib/image/group-logo.png";
+	import { t } from "$lib/translations";
+
 	type Procedure = "first" | "second" | "third" | "fourth";
 	let procedure: Procedure = "first";
 
@@ -31,69 +33,55 @@
 			</a>
 		</div>
 		<div class="sign-up-container">
-			<div class="sign-up-sec-info">회원가입</div>
-			{#if procedure === "first"}
-				<div class="sign-up-info-container">
-					<div class="info">연동할 이메일을</div>
-					<div class="info sec">입력해주세요.</div>
+			<div class="sign-up-sec-info">{$t("sign_up.signUp")}</div>
+			<div class="sign-up-info-container">
+				<div class="info">
+					{$t(`sign_up.title.${procedure}`).split("\n")[0]}
 				</div>
-				<div class="sign-in-input">
-					<div class="sign-up-email-input">
+				<div class="info sec">
+					{$t(`sign_up.title.${procedure}`).split("\n")[1]}
+				</div>
+			</div>
+			<div class="sign-in-input">
+				<div class="sign-up-email-input">
+					{#if procedure === "first"}
 						<input
 							class="mr10"
 							type="email"
-							placeholder="이메일을 입력해주세요."
+							placeholder={$t("sign_up.placeholder.email")}
 						/>
-						<input type="email" placeholder="이메일을 입력해주세요." />
-					</div>
+						<input type="email" placeholder={$t("sign_up.placeholder.email")} />
+					{:else if procedure === "second"}
+						<input type="email" placeholder={$t("sign_up.placeholder.code")} />
+					{:else if procedure === "third"}
+						<input
+							type="email"
+							placeholder={$t("sign_up.placeholder.nickName")}
+						/>
+					{/if}
 				</div>
-			{:else if procedure === "second"}
-				<div class="sign-up-info-container">
-					<div class="info">이메일로 발송된</div>
-					<div class="info sec">6자리 코드를 입력해주세요.</div>
-				</div>
-				<div class="sign-in-input">
-					<div class="sign-up-email-input">
-						<input type="email" placeholder="6자리 코드를 입력해주세요." />
-					</div>
-				</div>
-			{:else if procedure === "third"}
-				<div class="sign-up-info-container">
-					<div class="info">그룹에서 사용할</div>
-					<div class="info sec">닉네임을 입력해주세요.</div>
-				</div>
-				<div class="sign-in-input">
-					<div class="sign-up-email-input">
-						<input type="email" placeholder="닉네임을 입력해주세요." />
-					</div>
-				</div>
-			{:else if procedure === "fourth"}
-				<div class="sign-up-info-container">
-					<div class="info">000님, 반갑습니다.</div>
-					<div class="info sec">회원가입에 성공했습니다.</div>
-				</div>
-			{/if}
+			</div>
 			<div class="flc jsb">
 				{#if procedure !== "first"}
 					<div
 						class="go-back-btn"
 						on:click={() => handleChange(procedure, "desc")}
 					>
-						뒤로가기
+						{$t("sign_up.goBack")}
 					</div>
 				{:else}
 					<div />
 				{/if}
 				{#if procedure === "fourth"}
 					<a href="/">
-						<div class="basic-btn">메인페이지로</div>
+						<div class="basic-btn">{$t("sign_up.toMainPage")}</div>
 					</a>
 				{:else}
 					<div
 						class="basic-btn"
 						on:click={() => handleChange(procedure, "asc")}
 					>
-						다음
+						{$t("sign_up.next")}
 					</div>
 				{/if}
 			</div>
