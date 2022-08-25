@@ -1,6 +1,13 @@
 <script lang="ts">
 	import logoImage from "$lib/image/group-logo.png";
 	import { t } from "$lib/translations";
+	import {
+		Button,
+		Dropdown,
+		DropdownItem,
+		DropdownMenu,
+		DropdownToggle
+	} from "sveltestrap";
 
 	type Procedure = "first" | "second" | "third" | "fourth";
 	let procedure: Procedure = "first";
@@ -50,7 +57,15 @@
 							type="email"
 							placeholder={$t("sign_up.placeholder.email")}
 						/>
-						<input type="email" placeholder={$t("sign_up.placeholder.email")} />
+						<Dropdown class="select-email">
+							<DropdownToggle caret>이메일을 선택하세요</DropdownToggle>
+							<DropdownMenu>
+								<DropdownItem header>이메일</DropdownItem>
+								<DropdownItem>naver.com</DropdownItem>
+								<DropdownItem>gmail.com</DropdownItem>
+								<DropdownItem>nate.com</DropdownItem>
+							</DropdownMenu>
+						</Dropdown>
 					{:else if procedure === "second"}
 						<input type="email" placeholder={$t("sign_up.placeholder.code")} />
 					{:else if procedure === "third"}
@@ -61,7 +76,7 @@
 					{/if}
 				</div>
 			</div>
-			<div class="flc jsb">
+			<div class="flc jsb mt20">
 				{#if procedure !== "first"}
 					<div
 						class="go-back-btn"
@@ -74,15 +89,19 @@
 				{/if}
 				{#if procedure === "fourth"}
 					<a href="/">
-						<div class="basic-btn">{$t("sign_up.toMainPage")}</div>
+						<Button
+							class="basic-btn"
+							on:click={() => handleChange(procedure, "asc")}
+							>{$t("sign_up.toMainPage")}</Button
+						>
 					</a>
 				{:else}
-					<div
+					<Button
+						color="primary"
 						class="basic-btn"
 						on:click={() => handleChange(procedure, "asc")}
+						>{$t("sign_up.next")}</Button
 					>
-						{$t("sign_up.next")}
-					</div>
 				{/if}
 			</div>
 		</div>

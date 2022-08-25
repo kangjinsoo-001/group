@@ -50,7 +50,7 @@
 				</div>
 			</div>
 
-			<Button class="button-regular">로그인</Button>
+			<Button class="button-regular" color="primary">로그인</Button>
 
 			<aside class="another-sign-up-info">
 				<div class="line" />
