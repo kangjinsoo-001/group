@@ -25,12 +25,6 @@
 	<slot />
 </main>
 
-<footer>
-	<p>
-		visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
-	</p>
-</footer>
-
 <style global lang="scss">
 	@import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
 </style>
