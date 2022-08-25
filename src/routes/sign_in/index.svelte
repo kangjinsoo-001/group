@@ -19,6 +19,7 @@
 	import googleLogoImage from "$lib/image/google_logo.png";
 	import naverLogoImage from "$lib/image/naver_logo.png";
 	import kakaoLogoImage from "$lib/image/kakao_logo.png";
+	import { Button } from "sveltestrap";
 </script>
 
 <svelte:head>
@@ -42,16 +43,14 @@
 				</div>
 			</div>
 
-			<div class="sign-in-input">
+			<div class="sign-in-input last-child">
 				<h2 class="sub-title">비밀번호</h2>
 				<div>
 					<input type="email" placeholder="비밀번호를 입력해주세요." />
 				</div>
 			</div>
 
-			<button class="button-regular">
-				<div>로그인</div>
-			</button>
+			<Button class="button-regular">로그인</Button>
 
 			<aside class="another-sign-up-info">
 				<div class="line" />
