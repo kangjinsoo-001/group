@@ -64,11 +64,7 @@
 		transition: background-color 0.3s;
 	}
 	:global(body.dark-mode) {
-		background-color: #1d3040;
-		color: #bfc2c7;
-	}
-	:global(.dark-mode) {
-		background-color: #1d3040;
+		background-color: #000000;
 		color: #bfc2c7;
 	}
 </style>

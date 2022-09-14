@@ -16,6 +16,7 @@
 
 <script lang="ts">
 	import logoImage from "$lib/image/group-logo.png";
+	import DarkLogoImage from "$lib/image/dark_mode_logo";
 	import googleLogoImage from "$lib/image/google_logo.png";
 	import naverLogoImage from "$lib/image/naver_logo.png";
 	import kakaoLogoImage from "$lib/image/kakao_logo.png";
@@ -35,7 +36,7 @@
 			</a>
 		</div>
 
-		<div class="sign-in">
+		<div class="sign-in dark-container">
 			<div class="sign-in-input">
 				<h2 class="sub-title">아이디</h2>
 				<div>
@@ -61,19 +62,19 @@
 			<aside class="another-sign-up">
 				<div class="another-logo-container">
 					<div class="container">
-						<div class="another-logo google">
+						<div class="another-logo google dark-logo">
 							<img src={googleLogoImage} alt="google" />
 						</div>
 						<div class="another-text">Google</div>
 					</div>
 					<div class="container">
-						<div class="another-logo naver">
+						<div class="another-logo naver dark-logo">
 							<img src={naverLogoImage} alt="naver" />
 						</div>
 						<div class="another-text">Naver</div>
 					</div>
 					<div class="container">
-						<div class="another-logo kakao">
+						<div class="another-logo kakao dark-logo">
 							<img src={kakaoLogoImage} alt="kako" />
 						</div>
 						<div class="another-text">Kakao</div>
