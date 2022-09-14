@@ -30,6 +30,24 @@
 	}
 }
 
+body {
+	background-color: #ffffff;
+	&.dark-mode {
+		.test {
+			background-color: #333;
+		}
+	}
+}
+.dark-mode {
+	.test {
+		background-color: #333;
+	}
+}
+
+.test {
+	background-color: white;
+}
+
 .sign-up-email-input {
 	display: flex;
 	margin-top: 10px;
