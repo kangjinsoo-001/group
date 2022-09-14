@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { darkMode } from "$lib/store";
 	import logoImage from "$lib/image/group-logo.png";
+	import DarkLogoImage from "$lib/image/dark_mode_logo.png";
 	import { t } from "$lib/translations";
 	import {
 		Button,
@@ -11,6 +13,11 @@
 
 	type Procedure = "first" | "second" | "third" | "fourth";
 	let procedure: Procedure = "first";
+	let isDarkMode: boolean;
+
+	darkMode.subscribe((value) => {
+		isDarkMode = value;
+	});
 
 	function handleChange(value: Procedure, order: "asc" | "desc") {
 		switch (value) {
@@ -36,7 +43,7 @@
 	<div class="sub-container sign-up">
 		<div class="logo-sign-up">
 			<a href="/">
-				<img src={logoImage} alt="logo" />
+				<img src={isDarkMode ? DarkLogoImage : logoImage} alt="logo" />
 			</a>
 		</div>
 		<div class="sign-up-container">

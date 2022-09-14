@@ -15,12 +15,19 @@
 </script>
 
 <script lang="ts">
+	import { darkMode } from "$lib/store";
 	import logoImage from "$lib/image/group-logo.png";
-	import DarkLogoImage from "$lib/image/dark_mode_logo";
+	import DarkLogoImage from "$lib/image/dark_mode_logo.png";
 	import googleLogoImage from "$lib/image/google_logo.png";
 	import naverLogoImage from "$lib/image/naver_logo.png";
 	import kakaoLogoImage from "$lib/image/kakao_logo.png";
 	import { Button } from "sveltestrap";
+
+	let isDarkMode: boolean;
+
+	darkMode.subscribe((value) => {
+		isDarkMode = value;
+	});
 </script>
 
 <svelte:head>
@@ -32,7 +39,7 @@
 	<section class="sub-container">
 		<div class="logo-sign-in">
 			<a href="/">
-				<img src={logoImage} alt="logo" />
+				<img src={isDarkMode ? DarkLogoImage : logoImage} alt="logo" />
 			</a>
 		</div>
 

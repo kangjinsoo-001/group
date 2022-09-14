@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logoImage from "$lib/image/group-logo.png";
+	import { darkMode } from "$lib/store";
 	import { t } from "$lib/translations";
 	import {
 		Navbar,
@@ -17,6 +18,7 @@
 	} from "sveltestrap";
 	function toggle() {
 		window.document.body.classList.toggle("dark-mode");
+		darkMode.update((value) => !value);
 	}
 </script>
 
