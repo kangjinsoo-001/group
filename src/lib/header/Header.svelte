@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logoImage from "$lib/image/group-logo.png";
+	import { darkMode } from "$lib/store";
 	import { t } from "$lib/translations";
 	import {
 		Navbar,
@@ -12,8 +13,13 @@
 		DropdownMenu,
 		DropdownItem,
 		FormGroup,
-		Input
+		Input,
+		Button
 	} from "sveltestrap";
+	function toggle() {
+		window.document.body.classList.toggle("dark-mode");
+		darkMode.update((value) => !value);
+	}
 </script>
 
 <header>
@@ -43,6 +49,7 @@
 				<NavLink href="sign_in">{$t("layout.logIn")}</NavLink>
 			</NavItem>
 		</Nav>
+		<Button on:click={toggle}>다크모드</Button>
 	</Navbar>
 </header>
 
@@ -51,5 +58,14 @@
 		cursor: pointer;
 		width: 120px;
 		margin-top: 10px;
+	}
+
+	:global(body) {
+		background-color: #ffffff;
+		color: #0084f6;
+	}
+	:global(body.dark-mode) {
+		background-color: #181819;
+		color: #bfc2c7;
 	}
 </style>
