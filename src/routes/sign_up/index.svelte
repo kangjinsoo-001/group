@@ -46,7 +46,7 @@
 				<img src={isDarkMode ? DarkLogoImage : logoImage} alt="logo" />
 			</a>
 		</div>
-		<div class="sign-up-container">
+		<div class="sign-up-container dark-container">
 			<div class="sign-up-sec-info">{$t("sign_up.signUp")}</div>
 			<div class="sign-up-info-container">
 				<div class="info">

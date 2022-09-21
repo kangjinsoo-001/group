@@ -48,7 +48,7 @@
 </script>
 
 {#each dummy as { groupName, image, author, PostTitle, description }, i}
-	<Card class="mb-3">
+	<Card class="mb-3 dark-container">
 		<CardTitle class="card-title border-bottom mt-3 p-2">
 			<Row class="d-flex justify-content-center">
 				<Col class="w-100">

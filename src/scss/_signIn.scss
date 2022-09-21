@@ -1,12 +1,16 @@
 body {
 	&.dark-mode {
 		.dark-container {
-			background-color: #272728;
-			border: 1px solid #3c3c43;
+			background-color: #272728 !important;
+			border: 1px solid #3c3c43 !important;
 		}
 		button,
 		.dark-logo {
 			border: none !important;
+		}
+
+		.test {
+			background-color: #cecece;
 		}
 	}
 }

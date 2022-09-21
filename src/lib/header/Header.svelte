@@ -23,7 +23,7 @@
 </script>
 
 <header>
-	<Navbar color="light" light expand="md">
+	<Navbar class="dark-container" light expand="md">
 		<NavbarBrand href="/"
 			><img class="main-logo" src={logoImage} alt="logo" /></NavbarBrand
 		>

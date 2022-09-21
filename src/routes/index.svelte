@@ -37,11 +37,10 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-
-<Container>
+<Container class="mt40">
 	<Row>
-		<Col xs="7"><PostCard /></Col>
-		<Col xs="5">
+		<Col xs="8"><PostCard /></Col>
+		<Col xs="4">
 			<Ranking />
 		</Col>
 	</Row>
