@@ -15,6 +15,9 @@
 </script>
 
 <script lang="ts">
+	import Ranking from "$lib/components/Ranking.svelte";
+	import PostCard from "$lib/components/PostCard.svelte";
+	import { Col, Container, Row } from "sveltestrap";
 	import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
 	import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
 
@@ -33,6 +36,16 @@
 	<title>main</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
+
+
+<Container>
+	<Row>
+		<Col xs="7"><PostCard /></Col>
+		<Col xs="5">
+			<Ranking />
+		</Col>
+	</Row>
+</Container>
 
 <div class="main-container">
 	<div class="container">
