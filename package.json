@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"postinstall": "patch-package",
-		"dev": "env-cmd -f .env.development svelte-kit dev --port 8000",
+		"dev": "env-cmd -f .env.development svelte-kit dev --port 5000",
 		"build": "env-cmd -f .env.production svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
