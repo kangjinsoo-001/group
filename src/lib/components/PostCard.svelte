@@ -49,20 +49,32 @@
 
 {#each dummy as { groupName, image, author, PostTitle, description }, i}
 	<Card class="mb-3 dark-container">
-		<CardTitle class="card-title border-bottom mt-3 p-2">
-			<Row class="d-flex justify-content-center">
-				<Col class="w-100">
-					<Row>
-						{groupName}
-					</Row>
-					<Row>
-						{author}
-					</Row>
+		<CardTitle class="card-title p-3">
+			<Row class="d-flex justify-content-between">
+				<Col md="8" class="writer-container d-flex">
+					<Col class="image-container">
+						<Row class="user-image" />
+					</Col>
+					<Col>
+						<Row class="group">
+							{groupName}
+						</Row>
+						<Row class="writer">
+							{author}
+						</Row>
+					</Col>
 				</Col>
-				<Col class="flex-shrink-1">
+				<Col
+					md="4"
+					class="flex-shrink-1 d-flex align-items-center justify-content-end"
+				>
 					<Row class="d-flex">
-						<Col xs="10"><Button>가입하기</Button></Col>
-						<Col xs="2"><Icon name="three-dots" /></Col>
+						<div class="w-fit">
+							<Button class="group-sign-in">가입하기</Button>
+						</div>
+						<div class="w-fit d-flex align-items-center">
+							<Icon name="three-dots" />
+						</div>
 					</Row>
 				</Col>
 			</Row>

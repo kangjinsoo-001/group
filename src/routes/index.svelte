@@ -39,8 +39,8 @@
 
 <Container class="mt40">
 	<Row>
-		<Col xs="8"><PostCard /></Col>
-		<Col xs="4">
+		<Col xs="12" md="8"><PostCard /></Col>
+		<Col xs="0" md="4">
 			<Ranking />
 		</Col>
 	</Row>

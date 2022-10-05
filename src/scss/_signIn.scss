@@ -1,20 +1,3 @@
-body {
-	&.dark-mode {
-		.dark-container {
-			background-color: #272728 !important;
-			border: 1px solid #3c3c43 !important;
-		}
-		button,
-		.dark-logo {
-			border: none !important;
-		}
-
-		.test {
-			background-color: #cecece;
-		}
-	}
-}
-
 .sign-in-container {
 	width: 100%;
 	height: 100vh;

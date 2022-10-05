@@ -1,9 +1,10 @@
-@import "./font";
-@import "./palette";
+@import "./font.scss";
+@import "./palette.scss";
 @import "./keyframe.scss";
 @import "./signUp.scss";
 @import "./signIn.scss";
 @import "./commonUse.scss";
+@import "./postCard.scss";
 
 * {
 	margin: 0;
@@ -15,6 +16,21 @@
 
 body {
 	padding: 0;
+
+	&.dark-mode {
+		.dark-container {
+			background-color: #272728 !important;
+			border: 1px solid #3c3c43 !important;
+		}
+		button,
+		.dark-logo {
+			border: none !important;
+		}
+
+		.test {
+			background-color: #cecece;
+		}
+	}
 }
 
 input {

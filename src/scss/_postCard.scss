@@ -1,0 +1,37 @@
+.card-title {
+	border-bottom: 1px solid #454545 !important;
+
+	.writer-container {
+		padding-left: 1.8rem;
+
+		.image-container {
+			flex: 0.05;
+			margin-right: 1.2rem;
+			.user-image {
+				width: 2.2rem;
+				height: 2.2rem;
+				background-color: #4d4d4d;
+				border-radius: 0.4rem;
+			}
+		}
+
+		.group {
+			font-size: 1rem;
+			margin-bottom: 0.2rem;
+		}
+
+		.writer {
+			font-size: 0.8rem;
+			font-weight: 400;
+			color: #828386;
+		}
+	}
+
+	.group-sign-in {
+		background-color: #4b4b53;
+		color: #ffffff;
+		font-size: 0.9rem;
+		border: 1px solid #545258 !important;
+		letter-spacing: 0.03rem;
+	}
+}
