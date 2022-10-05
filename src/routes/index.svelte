@@ -37,7 +37,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<Container class="mt40">
+<Container class="mt40 main-container">
 	<Row>
 		<Col xs="12" md="8"><PostCard /></Col>
 		<Col xs="0" md="4">
