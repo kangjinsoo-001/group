@@ -52,16 +52,18 @@
 		<CardTitle class="card-title p-3">
 			<Row class="d-flex justify-content-between">
 				<Col md="8" class="writer-container d-flex">
-					<Col class="image-container">
-						<Row class="user-image" />
-					</Col>
-					<Col>
-						<Row class="group">
-							{groupName}
-						</Row>
-						<Row class="writer">
-							{author}
-						</Row>
+					<Col class="flex">
+						<div class="image-container">
+							<div class="user-image" />
+						</div>
+						<div>
+							<div class="group">
+								{groupName}
+							</div>
+							<div class="writer">
+								{author}
+							</div>
+						</div>
 					</Col>
 				</Col>
 				<Col
