@@ -7,111 +7,115 @@
 @import "./postCard.scss";
 
 * {
-	margin: 0;
-	padding: 0;
-	list-style: 0;
-	text-decoration: none;
-	font-family: NotoSansCJKkr;
+  margin: 0;
+  padding: 0;
+  list-style: 0;
+  text-decoration: none;
+  font-family: NotoSansCJKkr;
 }
 
 input {
-	width: 100%;
+  width: 100%;
 }
 
 .for-height {
-	height: 2000px;
+  height: 2000px;
 }
 
 .main {
-	height: 2000px;
-	display: flex;
-	justify-content: center;
+  height: 2000px;
+  display: flex;
+  justify-content: center;
 }
 
 .word {
-	display: flex;
-	justify-content: center;
-	padding: 4rem 0;
-	font-size: 3rem;
-	font-weight: bold;
-	background-color: #eff1f4;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #eff1f4;
 
-	div {
-		margin-left: -1px;
-	}
+  div {
+    margin-left: -1px;
+  }
 
-	.word-container {
-		position: relative;
-		width: 1140px;
-		display: flex;
-		justify-content: space-between;
+  .word-container {
+    position: relative;
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
 
-		.dieter-rams-img {
-			img:first-child {
-				position: absolute;
-				top: -65px;
-				right: 0px;
-				height: 271px;
-				opacity: 0;
+    .dieter-rams-img {
+      img:first-child {
+        position: absolute;
+        top: -65px;
+        right: 0px;
+        height: 271px;
+        opacity: 0;
 
-				animation: dieter-rams 2s ease-in-out;
-			}
+        animation: dieter-rams 2s ease-in-out;
+      }
 
-			img:nth-child(2) {
-				position: absolute;
-				top: -65px;
-				right: 0px;
-				height: 271px;
-			}
+      img:nth-child(2) {
+        position: absolute;
+        top: -65px;
+        right: 0px;
+        height: 271px;
+      }
 
-			.important {
-				position: absolute;
-				right: 156px;
-				top: 13px;
-				background-color: #000000;
-				font-size: 1.4rem;
-				color: white;
-				display: flex;
-				padding: 0.2rem 0.5rem;
-				justify-content: center;
+      .important {
+        position: absolute;
+        right: 156px;
+        top: 13px;
+        background-color: #000000;
+        font-size: 1.4rem;
+        color: white;
+        display: flex;
+        padding: 0.2rem 0.5rem;
+        justify-content: center;
 
-				animation: comment 2.7s ease-in;
+        animation: comment 2.7s ease-in;
 
-				&.reverse {
-					top: 104px;
-					right: 329px;
-					background-color: #cecece;
-					font-size: 1rem;
+        &.reverse {
+          top: 104px;
+          right: 329px;
+          background-color: #cecece;
+          font-size: 1rem;
 
-					animation: comment 3s ease-in;
-				}
-			}
-		}
-	}
+          animation: comment 3s ease-in;
+        }
+      }
+    }
+  }
 }
 
 .wrapper {
-	width: 1140px;
+  width: 1140px;
 
-	.title {
-		font-size: 1.1rem;
-		color: $fontDefaultColor;
-		font-weight: 500;
-		margin-top: 1.5rem;
-	}
+  .title {
+    font-size: 1.1rem;
+    color: $fontDefaultColor;
+    font-weight: 500;
+    margin-top: 1.5rem;
+  }
 
-	.item {
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 
-		div {
-			width: 33.33333%;
-			background-color: #cecece;
-		}
-	}
+    div {
+      width: 33.33333%;
+      background-color: #cecece;
+    }
+  }
 }
 
 .data-container {
-	margin-top: 40px;
+  margin-top: 40px;
+}
+
+.test-container {
+  max-width: 960px;
 }
