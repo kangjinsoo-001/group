@@ -1,5 +1,6 @@
 <script lang="ts">
   import logoImage from "$lib/images/group_logo_gray.png";
+  import { goto } from "$app/navigation";
   import { darkMode } from "$lib/store";
   //   import { t } from "$lib/translations";
   // // import {
@@ -81,10 +82,16 @@
       </form>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2"
-          >{"글쓰기"}</button
+        <button
+          type="button"
+          class="btn btn-outline-light me-2"
+          on:click={() => goto("write")}>{"글쓰기"}</button
         >
-        <button type="button" class="btn btn-primary me-2">{"로그인"}</button>
+        <button
+          type="button"
+          class="btn btn-primary me-2"
+          on:click={() => goto("sign_in")}>{"로그인"}</button
+        >
         <button type="button" on:click={toggle} class="btn btn-secondary"
           >다크모드</button
         >
