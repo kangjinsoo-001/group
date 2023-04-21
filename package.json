@@ -36,6 +36,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@tinymce/tinymce-svelte": "^1.0.1",
     "patch-package": "^6.5.1",
     "postinstall-postinstall": "^2.1.0",
     "sass": "^1.60.0",

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { darkMode } from "$lib/store";
+  import Editor from "@tinymce/tinymce-svelte";
   import logoImage from "$lib/images/group-logo.png";
   import DarkLogoImage from "$lib/images/dark_mode_logo.png";
   //   import { t } from "$lib/translations";
@@ -37,6 +38,24 @@
         break;
     }
   }
+
+  let value = "";
+
+  const conf = {
+    plugins:
+      "preview searchreplace autolink autosave directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking insertdatetime advlist lists wordcount help charmap quickbars emoticons",
+    toolbar:
+      "restoredraft undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview print | image media link codesample",
+    toolbar_sticky: true,
+    image_caption: true,
+    autosave_ask_before_unload: true,
+    autosave_interval: "30s",
+    autosave_prefix: "tinymce-autosave-{path}{query}-{id}-",
+    autosave_restore_when_empty: false,
+    autosave_retention: "2m",
+    quickbars_selection_toolbar:
+      "bold italic | quicklink h2 h3 blockquote quickimage quicktable",
+  };
 </script>
 
 <div class="write-container">
@@ -56,6 +75,14 @@
           controls. Each required form group has a validation state that can be
           triggered by attempting to submit the form without completing it.
         </p>
+      </div>
+      <div>
+        <Editor
+          apiKey="uh5sc6joentkr6hrnd8u6jo7xnoyrhyg5cs6r30pjemy5r5s"
+          id="write"
+          bind:value
+          {conf}
+        />
       </div>
 
       <div class="row g-5">
