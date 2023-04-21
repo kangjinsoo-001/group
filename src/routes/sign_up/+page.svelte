@@ -85,6 +85,7 @@
           <div
             class="go-back-btn"
             on:click={() => handleChange(procedure, "desc")}
+            on:keypress={() => handleChange(procedure, "desc")}
           >
             {"뒤로가기"}
           </div>

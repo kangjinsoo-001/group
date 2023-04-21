@@ -2,8 +2,8 @@
   import Ranking from "$lib/components/Ranking.svelte";
   import PostCard from "$lib/components/PostCard.svelte";
   import { Col, Container, Row } from "sveltestrap";
-  import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
-  import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
+  // import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
+  // import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
 
   type Todo = {
     uid: string;
@@ -13,7 +13,7 @@
     pending_delete: boolean;
   };
 
-  export let todos: Todo[];
+  // export let todos: Todo[];
 </script>
 
 <svelte:head>
