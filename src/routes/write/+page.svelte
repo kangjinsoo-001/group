@@ -1,6 +1,7 @@
 <script lang="ts">
   import { darkMode } from "$lib/store";
   import Editor from "@tinymce/tinymce-svelte";
+  import { env } from "$env/dynamic/public";
   import logoImage from "$lib/images/group-logo.png";
   import DarkLogoImage from "$lib/images/dark_mode_logo.png";
   //   import { t } from "$lib/translations";
@@ -77,12 +78,7 @@
         </p>
       </div>
       <div>
-        <Editor
-          apiKey="uh5sc6joentkr6hrnd8u6jo7xnoyrhyg5cs6r30pjemy5r5s"
-          id="write"
-          bind:value
-          {conf}
-        />
+        <Editor apiKey={env.PUBLIC_TINY_API_KEY} id="write" bind:value {conf} />
       </div>
 
       <div class="row g-5">
