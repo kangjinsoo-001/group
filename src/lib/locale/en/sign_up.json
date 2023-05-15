@@ -1,0 +1,18 @@
+{
+  "signUp": "Sign Up",
+  "goBack": "Go Back",
+  "next": "Next",
+  "toMainPage": "To MainPage",
+  "selectEmail": "Select Email",
+  "title": {
+    "first": "Enter the email\nto linkPlease.",
+    "second": "Please enter the\n6-digit code sent to you by email.",
+    "third": "Please enter a nickname\nto use in the group.",
+    "fourth": "Nice to meet you, 000.\nYour registration was successful."
+  },
+  "placeholder": {
+    "email": "Please enter your email.",
+    "code": "Please enter a 6-digit code.",
+    "nickName": "Please enter a nickname."
+  }
+}

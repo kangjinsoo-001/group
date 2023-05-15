@@ -1,8 +1,8 @@
 <script lang="ts">
   import { darkMode } from "$lib/store";
+  import { t } from "$lib/locale/translations";
   import logoImage from "$lib/images/group-logo.png";
   import DarkLogoImage from "$lib/images/dark_mode_logo.png";
-  //   import { t } from "$lib/translations";
   import {
     Button,
     Dropdown,
@@ -47,13 +47,13 @@
       </a>
     </div>
     <div class="sign-up-container dark-container">
-      <div class="sign-up-sec-info">{"회원가입"}</div>
+      <div class="sign-up-sec-info">{$t("sign_up.signUp")}</div>
       <div class="sign-up-info-container">
         <div class="info">
-          <!-- {$t(`sign_up.title.${procedure}`).split("\n")[0]} -->
+          {$t(`sign_up.title.${procedure}`).split("\n")[0]}
         </div>
         <div class="info sec">
-          <!-- {$t(`sign_up.title.${procedure}`).split("\n")[1]} -->
+          {$t(`sign_up.title.${procedure}`).split("\n")[1]}
         </div>
       </div>
       <div class="sign-in-input">
@@ -62,21 +62,24 @@
             <input
               class="mr10"
               type="email"
-              placeholder={"이메일을 입력해주세요."}
+              placeholder={$t("sign_up.placeholder.email")}
             />
             <Dropdown class="select-email">
-              <DropdownToggle caret>이메일을 선택하세요</DropdownToggle>
+              <DropdownToggle caret>{$t("sign_up.selectEmail")}</DropdownToggle>
               <DropdownMenu>
-                <DropdownItem header>이메일</DropdownItem>
+                <DropdownItem header>{$t("common.email")}</DropdownItem>
                 <DropdownItem>naver.com</DropdownItem>
                 <DropdownItem>gmail.com</DropdownItem>
                 <DropdownItem>nate.com</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           {:else if procedure === "second"}
-            <input type="email" placeholder={"6자리 코드를 입력해주세요."} />
+            <input type="email" placeholder={$t("sign_up.placeholder.code")} />
           {:else if procedure === "third"}
-            <input type="email" placeholder={"닉네임을 입력해주세요."} />
+            <input
+              type="email"
+              placeholder={$t("sign_up.placeholder.nickName")}
+            />
           {/if}
         </div>
       </div>
@@ -87,7 +90,7 @@
             on:click={() => handleChange(procedure, "desc")}
             on:keypress={() => handleChange(procedure, "desc")}
           >
-            {"뒤로가기"}
+            {$t("sign_up.goBack")}
           </div>
         {:else}
           <div />
@@ -97,14 +100,16 @@
             <Button
               class="basic-btn"
               on:click={() => handleChange(procedure, "asc")}
-              >{"메인페이지로"}</Button
+            >
+              {$t("sign_up.toMainPage")}</Button
             >
           </a>
         {:else}
           <Button
             color="primary"
             class="basic-btn"
-            on:click={() => handleChange(procedure, "asc")}>{"다음"}</Button
+            on:click={() => handleChange(procedure, "asc")}
+            >{$t("sign_up.next")}</Button
           >
         {/if}
       </div>
