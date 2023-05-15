@@ -270,6 +270,18 @@
     svelte-hmr "^0.15.1"
     vitefu "^0.2.4"
 
+"@sveltekit-i18n/base@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@sveltekit-i18n/base/-/base-1.2.1.tgz#5e97f1aaefb132858ecc7e5ad5efbb7849d6e224"
+  integrity sha512-F8gqG2+KAOeT0o2wYlUrW3TRCX7zaD7rBy/1CEVNw0irfw9TgFf/ODmhubkHHT3+6Zk+SMz8RNgeuffBfAMbJw==
+  optionalDependencies:
+    "@sveltekit-i18n/parser-default" "^1.x"
+
+"@sveltekit-i18n/parser-default@1.0.3", "@sveltekit-i18n/parser-default@^1.x":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@sveltekit-i18n/parser-default/-/parser-default-1.0.3.tgz#6ca5fee97d280e840c6222eb80e59da82a5d5524"
+  integrity sha512-HheveklTjp3hxpYQhoHfyA6B4bQaUeSV5MQf2usIv/58UF2jY/YqhCAWj9bDBjufbuZc5pSz4BXvdX3WVT+viA==
+
 "@tinymce/tinymce-svelte@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@tinymce/tinymce-svelte/-/tinymce-svelte-1.0.1.tgz#4bdb83f09a542ace5b22c476e2648741e452c41a"
@@ -1669,6 +1681,14 @@ svelte@^3.54.0:
   version "3.58.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.58.0.tgz#d3e6f103efd6129e51c7d709225ad3b4c052b64e"
   integrity sha512-brIBNNB76mXFmU/Kerm4wFnkskBbluBDCjx/8TcpYRb298Yh2dztS2kQ6bhtjMcvUhd5ynClfwpz5h2gnzdQ1A==
+
+sveltekit-i18n@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/sveltekit-i18n/-/sveltekit-i18n-2.2.2.tgz#5916c81c27e1773049c1201d574b0af12ba4ca23"
+  integrity sha512-6eygICleGCSL7elY7A3trF8XUhV+mlW56ZSoD0UUKXlw+Y6u0MTTHDq48u1LyY73SfnlbPHXgTarhTjZ0BvUKA==
+  dependencies:
+    "@sveltekit-i18n/base" "1.2.1"
+    "@sveltekit-i18n/parser-default" "1.0.3"
 
 sveltestrap@^5.10.0:
   version "5.10.0"
