@@ -2,7 +2,6 @@
   import { darkMode } from "$lib/store";
   import Editor from "@tinymce/tinymce-svelte";
   import { env } from "$env/dynamic/public";
-  import { PUBLIC_TEST, PUBLIC_TINY_API_KEY } from "$env/static/public";
 
   import logoImage from "$lib/images/group-logo.png";
   import DarkLogoImage from "$lib/images/dark_mode_logo.png";
@@ -82,8 +81,6 @@
       <div>
         <Editor apiKey={env.PUBLIC_TINY_API_KEY} id="write" bind:value {conf} />
       </div>
-      <div>{PUBLIC_TEST}</div>
-      <div>{PUBLIC_TINY_API_KEY}</div>
 
       <div class="row g-5">
         <div class="col-md-5 col-lg-4 order-md-last">
