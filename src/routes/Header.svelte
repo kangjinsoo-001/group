@@ -2,7 +2,7 @@
   import logoImage from "$lib/images/group_logo_gray.png";
   import { goto } from "$app/navigation";
   import { darkMode } from "$lib/store";
-  //   import { t } from "$lib/translations";
+  import { t } from "$lib/locale/translations";
   // // import {
   // // 	Navbar,
   // // 	NavbarBrand,
@@ -76,7 +76,7 @@
         <input
           type="search"
           class="form-control form-control-dark text-bg-dark"
-          placeholder="검색어를 입력하세요"
+          placeholder={$t("layout.placeholder.search")}
           aria-label="Search"
         />
       </form>
@@ -85,15 +85,15 @@
         <button
           type="button"
           class="btn btn-outline-light me-2"
-          on:click={() => goto("write")}>{"글쓰기"}</button
+          on:click={() => goto("write")}>{$t("layout.writing")}</button
         >
         <button
           type="button"
           class="btn btn-primary me-2"
-          on:click={() => goto("sign_in")}>{"로그인"}</button
+          on:click={() => goto("sign_in")}>{$t("layout.logIn")}</button
         >
         <button type="button" on:click={toggle} class="btn btn-secondary"
-          >다크모드</button
+          >{$t("layout.darkMode")}</button
         >
       </div>
     </div>
