@@ -1,5 +1,7 @@
 <script lang="ts">
   import { Button, Image, Card, CardBody } from "sveltestrap";
+  import { t } from "$lib/locale/translations";
+
   let status = "groupMember" as "groupMember" | "growth";
   const dummy = {
     groupMember: [
@@ -49,7 +51,7 @@
 </script>
 
 <div style="width: 300px">
-  <div style="font-weight: bold;">그룹 랭킹</div>
+  <div style="font-weight: bold;">{$t("main.groupRanking")}</div>
   <div style="display: flex;">
     <Button
       active
@@ -59,7 +61,7 @@
         status = "groupMember";
       }}
     >
-      그룹원 수
+      {$t("main.groupMemberNumber")}
     </Button>
     <Button
       outline
@@ -68,7 +70,7 @@
         status = "growth";
       }}
     >
-      성장속도
+      {$t("main.growthRate")}
     </Button>
   </div>
   {#each dummy[status] as item, index}

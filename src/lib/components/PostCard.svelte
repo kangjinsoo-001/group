@@ -12,6 +12,8 @@
     Col,
     Image,
   } from "sveltestrap";
+  import { t } from "$lib/locale/translations";
+
   let dummy = [
     {
       groupName: "자동차를 좋아해",
@@ -72,7 +74,7 @@
         >
           <Row class="d-flex">
             <div class="w-fit">
-              <Button class="group-sign-in">가입하기</Button>
+              <Button class="group-sign-in">{$t("main.signUp")}</Button>
             </div>
             <div class="w-fit d-flex align-items-center">
               <Icon name="three-dots" />
