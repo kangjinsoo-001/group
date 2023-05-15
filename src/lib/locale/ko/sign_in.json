@@ -1,0 +1,13 @@
+{
+  "logIn": "로그인",
+  "oAuthLogIn": "다른 계정으로 로그인",
+  "placeholder": {
+    "email": "이메일을 입력해주세요",
+    "password": "비밀번호를 입력해주세요"
+  },
+  "search": {
+    "id": "아이디 찾기",
+    "password": "비밀번호 찾기",
+    "signUp": "회원가입"
+  }
+}

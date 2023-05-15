@@ -1,5 +1,7 @@
 <script lang="ts">
   import { darkMode } from "$lib/store";
+  import { t } from "$lib/locale/translations";
+
   import logoImage from "$lib/images/group-logo.png";
   import DarkLogoImage from "$lib/images/dark_mode_logo.png";
   import googleLogoImage from "$lib/images/google_logo.png";
@@ -29,24 +31,29 @@
 
     <div class="sign-in dark-container">
       <div class="sign-in-input">
-        <h2 class="sub-title">아이디</h2>
+        <h2 class="sub-title">{$t("common.id")}</h2>
         <div>
-          <input type="email" placeholder="이메일을 입력해주세요." />
+          <input type="email" placeholder={$t("sign_in.placeholder.email")} />
         </div>
       </div>
 
       <div class="sign-in-input last-child">
-        <h2 class="sub-title">비밀번호</h2>
+        <h2 class="sub-title">{$t("common.password")}</h2>
         <div>
-          <input type="email" placeholder="비밀번호를 입력해주세요." />
+          <input
+            type="email"
+            placeholder={$t("sign_in.placeholder.password")}
+          />
         </div>
       </div>
 
-      <Button class="button-regular" color="primary">로그인</Button>
+      <Button class="button-regular" color="primary"
+        >{$t("sign_in.logIn")}
+      </Button>
 
       <aside class="another-sign-up-info">
         <div class="line" />
-        <div class="info">다른 계정으로 로그인</div>
+        <div class="info">{$t("sign_in.oAuthLogIn")}</div>
         <div class="line" />
       </aside>
 
@@ -75,12 +82,12 @@
     </div>
 
     <footer class="find-content">
-      <div>비밀번호 찾기</div>
+      <div>{$t("sign_in.search.id")}</div>
       <div>|</div>
-      <div>아이디 찾기</div>
+      <div>{$t("sign_in.search.password")}</div>
       <div>|</div>
       <a href="/sign_up">
-        <div>회원가입</div>
+        <div>{$t("sign_in.search.signUp")}</div>
       </a>
     </footer>
   </section>

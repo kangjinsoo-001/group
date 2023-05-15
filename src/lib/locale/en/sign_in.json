@@ -1,0 +1,13 @@
+{
+  "logIn": "login",
+  "oAuthLogIn": "Log in with another account",
+  "placeholder": {
+    "email": "Please enter your email",
+    "password": "Please enter your password"
+  },
+  "search": {
+    "id": "Find ID",
+    "password": "Find password",
+    "signUp": "Sign Up"
+  }
+}
