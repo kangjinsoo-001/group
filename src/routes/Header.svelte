@@ -116,7 +116,7 @@
 
   :global(body) {
     background-color: #ffffff;
-    color: #0084f6;
+    /* color: #0084f6; */
   }
   :global(body.dark-mode) {
     background-color: #181819;

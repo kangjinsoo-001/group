@@ -1,0 +1,27 @@
+.write-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title-one {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .label {
+    display: flex;
+
+    div {
+      font-size: 17px;
+      margin-right: 7px;
+      font-weight: bold;
+    }
+
+    .number {
+      background-color: #e7e7e7;
+      padding: 0px 10px;
+      display: flex;
+      border-radius: 10px;
+    }
+  }
+}
