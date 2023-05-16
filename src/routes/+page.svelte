@@ -1,59 +1,35 @@
-<script>
-  import Counter from "./Counter.svelte";
-  import welcome from "$lib/images/svelte-welcome.webp";
-  import welcome_fallback from "$lib/images/svelte-welcome.png";
+<script lang="ts">
+  import Ranking from "$lib/components/Ranking.svelte";
+  import PostCard from "$lib/components/PostCard.svelte";
+  import { Col, Container, Row } from "sveltestrap";
+  // import dieterRamsFirst from "$lib/image/dieter_rams_first.png";
+  // import dieterRamsSec from "$lib/image/dieter_rams_sec.png";
+
+  type Todo = {
+    uid: string;
+    created_at: Date;
+    text: string;
+    done: boolean;
+    pending_delete: boolean;
+  };
+
+  // export let todos: Todo[];
 </script>
 
 <svelte:head>
-  <title>Home</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>main</title>
+  <meta name="description" content="About this app" />
 </svelte:head>
 
-<section>
-  <h1>
-    <span class="welcome">
-      <picture>
-        <source srcset={welcome} type="image/webp" />
-        <img src={welcome_fallback} alt="Welcome" />
-      </picture>
-    </span>
-
-    to your new<br />SvelteKit app
-  </h1>
-
-  <h2>
-    try editing <strong>src/routes/+page.svelte</strong>
-  </h2>
-
-  <Counter />
-</section>
+<Container class="mt40 main-container">
+  <Row>
+    <Col xs="12" md="8"><PostCard /></Col>
+    <Col xs="0" md="4">
+      <Ranking />
+    </Col>
+  </Row>
+</Container>
 
 <style>
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 0.6;
-  }
-
-  h1 {
-    width: 100%;
-  }
-
-  .welcome {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding: 0 0 calc(100% * 495 / 2048) 0;
-  }
-
-  .welcome img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: block;
-  }
+  @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
 </style>
